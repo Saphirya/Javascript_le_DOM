@@ -1,3 +1,4 @@
+import "./style.css";
 const p = document.querySelector("p");
 const img = document.querySelector("img");
 const section = document.querySelector("section");
@@ -42,5 +43,30 @@ input.placeholder = "Hello";
 
 // input.minlenght = 10;
 
-console.log(input.validity);
+// console.log(input.validity);
 // Mismatch: false, tooLong: false, tooShort: false, …}badInput: falsecustomError: falsepatternMismatch: falserangeOverflow: falserangeUnderflow: falsestepMismatch: falsetooLong: falsetooShort: falsetypeMismatch: falsevalid: truevalueMissing: false[[Prototype]]: ValidityState
+
+section.style.width = 100;
+section.style.height = 100;
+section.style.backgroundColor = "";
+
+// console.log(section.style);
+
+// console.log(window.getComputedStyle(section));
+
+//ajout d'une classe sur une section
+// section.classList.add("red");
+// console.log(section.className);
+// console.log(section.getAttribute("class"));
+// section.className = " red text-primary";
+section.classList.add("red");
+section.classList.remove("test");
+setTimeout(() => {
+  section.classList.add("red");
+  console.log(section.classList.contains("red"));
+}, 5000);
+setTimeout(() => {
+  section.classList.toggle("red");
+}, 10000);
+
+section.classList.toggle("red");
